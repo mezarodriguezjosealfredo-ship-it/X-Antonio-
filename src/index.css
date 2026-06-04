@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
+  
+  --color-primary-green: #2E7D32;
+  --color-primary-green-dark: #1B5E20;
+  --color-primary-green-light: #4CAF50;
+  --color-primary-blue: #1565C0;
+  --color-primary-blue-dark: #0D47A1;
+  --color-primary-blue-light: #1E88E5;
+}
+
+/* Custom classes for leaflet icons or other scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base style tweaks for Leaflet map to look modern and clean */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.dark .leaflet-popup-content-wrapper {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+.dark .leaflet-popup-tip {
+  background-color: #1e293b !important;
+}
+
+.dark .leaflet-bar a {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+.dark .leaflet-bar a:hover {
+  background-color: #334155 !important;
+}

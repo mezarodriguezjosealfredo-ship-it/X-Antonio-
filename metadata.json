@@ -1,0 +1,6 @@
+{
+  "name": "Contaminación Ambiental en Culiacán",
+  "description": "Portal profesional de información, estadísticas, actividades interactivas y reporte de contaminación ambiental en Culiacán, Sinaloa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

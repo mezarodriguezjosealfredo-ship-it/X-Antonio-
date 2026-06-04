@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culiacán Verde — Observatorio de Contaminación y Participación Ciudadana</title>
+    <!-- Custom SVG Favicon (Environmental Eco Logo) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232E7D32'/><path d='M30,50 Q50,75 70,50 T30,50' fill='none' stroke='white' stroke-width='8' stroke-linecap='round'/><circle cx='50' cy='38' r='12' fill='%2381C784'/><path d='M35,32 Q50,15 65,32' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/></svg>" />
+    <!-- Google Fonts: Montserrat and Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet Map CSS stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 transition-colors duration-300 antialiased selection:bg-[#2E7D32]/20 selection:text-[#2E7D32]">
+    
+    <!-- Deeply elegant initial Loading Screen in #root container (Overwritten by React once hydrated) -->
+    <div id="root">
+      <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #0b1329; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 99999; font-family: 'Poppins', sans-serif; color: #ffffff; text-align: center; padding: 20px;">
+        
+        <!-- Rotating and Pulsating Eco Logo representing water, air and pollution awareness -->
+        <div style="position: relative; width: 100px; height: 100px; margin-bottom: 24px;">
+          <!-- Custom green glow background -->
+          <div style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle, rgba(76, 175, 80, 0.4) 0%, transparent 70%); animation: pulseGlow 2s infinite ease-in-out;"></div>
+          <!-- Earth/Leaf Eco Circle -->
+          <svg viewBox="0 0 100 100" style="width: 100%; height: 100%; animation: spinEco 8s linear infinite;">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#2E7D32" stroke-width="3" stroke-dasharray="12 6" />
+            <!-- Inner leaf -->
+            <path d="M50,20 C65,35 65,65 50,80 C35,65 35,35 50,20 Z" fill="#4CAF50" opacity="0.85" />
+            <!-- Water drop overlay -->
+            <path d="M50,30 C58,30 62,42 62,55 C62,68 50,75 50,75 C50,75 38,68 38,55 C38,42 42,30 50,30 Z" fill="#2196F3" opacity="0.7" />
+            <!-- Environmental clean cloud/ring -->
+            <ellipse cx="50" cy="50" rx="45" ry="12" fill="none" stroke="#81C784" stroke-width="4" transform="rotate(-30 50 50)" />
+          </svg>
+        </div>
+
+        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; margin: 0 0 8px 0; letter-spacing: -0.5px; background: linear-gradient(135deg, #a5d6a7 0%, #64b5f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Culiacán Verde
+        </h1>
+        <p style="font-size: 13px; font-weight: 500; color: #94a3b8; margin: 0 0 32px 0; letter-spacing: 0.5px; text-transform: uppercase;">
+          Observatorio Ambiental Escolar
+        </p>
+
+        <!-- Loading core progress bar indicator -->
+        <div style="width: 200px; height: 5px; background-color: #1e293b; border-radius: 99px; overflow: hidden; position: relative;">
+          <div style="position: absolute; top:0; left: 0; width: 60%; height: 100%; background: linear-gradient(90deg, #4CAF50, #2196F3); border-radius: 99px; animation: progressEco 1.5s infinite ease-in-out;"></div>
+        </div>
+
+        <span style="font-size: 11px; font-weight: 400; color: #64748b; margin-top: 14px; letter-spacing: 1px;">
+          CONECTANDO CON DATOS DEL MUNICIPIO...
+        </span>
+      </div>
+
+      <!-- Raw CSS definitions for the splash animations -->
+      <style>
+        @keyframes spinEco {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes pulseGlow {
+          0%, 100% { transform: scale(0.9); opacity: 0.5; }
+          50% { transform: scale(1.1); opacity: 1; }
+        }
+        @keyframes progressEco {
+          0% { left: -30%; width: 30%; }
+          50% { width: 40%; }
+          100% { left: 100%; width: 20%; }
+        }
+      </style>
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
