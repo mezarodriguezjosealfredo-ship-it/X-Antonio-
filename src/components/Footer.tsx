@@ -75,12 +75,15 @@ export default function Footer() {
               Autoría Escolar
             </h4>
             
-            <div className="space-y-1">
-              <span className="text-[11px] text-gray-500 font-bold block">Desarrollado y Compilado por:</span>
-              <p className="font-heading font-extrabold text-[#1E88E5] text-lg">
+            <div className="space-y-1.5">
+              <span className="text-[11px] text-gray-500 font-bold block">Desarrollado y Diseñado por:</span>
+              <p className="font-heading font-extrabold text-[#1E88E5] text-lg leading-tight">
                 Antonio Meraz
               </p>
-              <span className="text-[10px] text-gray-400 block font-medium">Estudiante Técnico Cbtis 224</span>
+              <p className="font-heading font-semibold text-gray-300 text-xs tracking-wide">
+                Orlando, Derek, Angel y Haziel
+              </p>
+              <span className="text-[10px] text-gray-400 block font-medium">Estudiantes Técnicos CBTis 224</span>
               <span className="text-[10px] text-gray-500 block font-medium">Culiacán, Sinaloa, México • 2026</span>
             </div>
           </div>
